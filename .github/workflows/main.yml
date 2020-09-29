@@ -33,7 +33,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
           source: ".,!node_modules"
-          target: "~/app/node-deploy"
+          target: "~/app/solouchuva-backend"
       
       #Executar "yarn" na Digital Ocean
       - name: Install dependencies on Digital Ocean
@@ -44,7 +44,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/app/deploy-solouchuva
+            cd ~/app/solouchuva-backend
             yarn
       
       # Executar as migrations do TypeORM
@@ -56,7 +56,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/app/deploy-solouchuva
+            cd ~/app/solouchuva-backend
             ./node_modules/.bin/typeorm migration:run
       
       # Restart no servidor Node.js
