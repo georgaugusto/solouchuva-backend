@@ -43,7 +43,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
-          script: cd ~/app/solouchuva-backend && yarn
+          script: |
+            cd ~/app/solouchuva-backend
+            yarn
       
       # Executar as migrations do TypeORM
       - name: Run migrations on Digital Ocean
@@ -53,7 +55,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
-          script: cd ~/app/solouchuva-backend && ./node_modules/.bin/typeorm migration:run
+          script: |
+            cd ~/app/solouchuva-backend
+            ./node_modules/.bin/typeorm migration:run
       
       # Restart no servidor Node.js
       - name: Restart the Node.js server
