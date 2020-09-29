@@ -48,5 +48,3 @@ jobs:
           script: | 
             cd ~/app/solouchuva-backend
             yarn
-            ./node_modules/.bin/typeorm migration:run
-            pm2 restart solouchuva-api
