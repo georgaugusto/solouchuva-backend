@@ -27,7 +27,7 @@ Para ver a **describe**, clique aqui: [SolouChuva Describe](https://github.com/g
 Para ver a **web client**, clique aqui: [SolouChuva Web](https://github.com/georgaugusto/solouchuva-frontend)</br>
 Para ver a **hardware**, clique aqui: [SolouChuva Hardware](https://github.com/georgaugusto/solouchuva-hardware)
 
-Para ver a aplicação rodando **solouchuva**, clique aqui: [SolouChuva App](https://app.solouchuva.com.br/dashboard)
+Para ver a **aplicação** rodando, clique aqui: [SolouChuva App](https://app.solouchuva.com.br/dashboard)
 
 ## Preview
 
