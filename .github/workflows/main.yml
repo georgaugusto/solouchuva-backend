@@ -44,7 +44,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/app/solouchuva-backend
+            cd ~/app/deploy-solouchuva
             yarn
       
       # Executar as migrations do TypeORM
@@ -56,7 +56,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/app/solouchuva-backend
+            cd ~/app/deploy-solouchuva
             ./node_modules/.bin/typeorm migration:run
       
       # Restart no servidor Node.js
